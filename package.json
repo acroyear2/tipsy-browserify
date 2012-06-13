@@ -1,0 +1,20 @@
+{
+  "name": "tipsy",
+  "description": "Tipsy tool-tip component",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visionmedia/tipsy.git"
+  },
+  "component": {
+    "scripts": {
+      "tipsy": "src/javascripts/jquery.tipsy.js"
+    },
+    "styles": ["src/stylesheets/tipsy.css"]
+  },
+  "dependencies": {
+    "jquery-component": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+}
