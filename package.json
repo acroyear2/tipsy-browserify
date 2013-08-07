@@ -6,8 +6,12 @@
     "type": "git",
     "url": "git://github.com/wlaurance/tipsy-browserify.git"
   },
-  "main":"jquery.tipsy.js",
-  "dependencies": {
-    "jquery-component": "*"
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "main": "jquery.tipsy.js",
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "browserify": "~2.26.0"
   }
 }
