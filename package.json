@@ -1,17 +1,12 @@
 {
-  "name": "tipsy",
-  "description": "Tipsy tool-tip component",
+  "name": "tipsy-browserify",
+  "description": "Tipsy tool-tip component for browserify",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/visionmedia/tipsy.git"
+    "url": "git://github.com/wlaurance/tipsy-browserify.git"
   },
-  "component": {
-    "scripts": {
-      "tipsy": "src/javascripts/jquery.tipsy.js"
-    },
-    "styles": ["src/stylesheets/tipsy.css"]
-  },
+  "main":"jquery.tipsy.js",
   "dependencies": {
     "jquery-component": "*"
   }
