@@ -26,28 +26,18 @@ Or clone from:
 
     git://github.com/jaz303/tipsy.git
 
-## Usage:
+## Usage: (with Browserify)
 
-1. Copy the contents of src/{images,javascripts,stylesheets} to the corresponding asset directories in your project. 
-   If the relative path of your images directory from your stylesheets   directory is not "../images", you'll need to adjust tipsy.css appropriately.
+1. npm install tipsy-browserify -S
 
-2. Insert the neccesary elements in your document's `<head>` section, e.g.:
-   
-        <script type='text/javascript' src='/javascripts/jquery.tipsy.js'></script>
-        <link rel="stylesheet" href="/stylesheets/tipsy.css" type="text/css" />
-
- Remember to include jquery.tipsy.js *after* including the main jQuery library.
-
-3. Initialise Tipsy in your document.onload, e.g.:
-
-        <script type='text/javascript'>
-         $(function() {
-	       $('a[rel=tipsy]').tipsy({fade: true, gravity: 'n'});
-	     });
-        </script>
-
-Please refer to the docs directory for more examples and documentation.
-
+2. require('tipsy-browserify')(jQuery); or
+ 
+```
+var tipsy = require('tipsy-browserify');
+if (typeof jQuery !== 'undefined') {
+  tipsy(jQuery);
+}
+```
 ## A note on forking:
 
 By forking this project you hereby grant permission for any commits to your fork to be
