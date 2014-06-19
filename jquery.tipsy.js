@@ -13,7 +13,6 @@ module.exports = function (jQuery) {
           this.$element = $(element);
           this.options = options;
           this.enabled = true;
-          this.fixTitle();
       };
       
       Tipsy.prototype = {
@@ -81,24 +80,8 @@ module.exports = function (jQuery) {
               }
           },
           
-          fixTitle: function() {
-              var $e = this.$element;
-              if ($e.attr('title') || typeof($e.attr('original-title')) != 'string') {
-                  $e.attr('original-title', $e.attr('title') || '').removeAttr('title');
-              }
-          },
-          
           getTitle: function() {
-              var title, $e = this.$element, o = this.options;
-              this.fixTitle();
-              var title, o = this.options;
-              if (typeof o.title == 'string') {
-                  title = $e.attr(o.title == 'title' ? 'original-title' : o.title);
-              } else if (typeof o.title == 'function') {
-                  title = o.title.call($e[0]);
-              }
-              title = ('' + title).replace(/(^\s*|\s*$)/, "");
-              return title || o.fallback;
+						return this.options.title;
           },
           
           tip: function() {
@@ -148,7 +131,6 @@ module.exports = function (jQuery) {
               if (options.delayIn == 0) {
                   tipsy.show();
               } else {
-                  tipsy.fixTitle();
                   setTimeout(function() { if (tipsy.hoverState == 'in') tipsy.show(); }, options.delayIn);
               }
           };
